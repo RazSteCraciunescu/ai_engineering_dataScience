@@ -27,7 +27,7 @@ accelerate>=1.2,<2
 safetensors>=0.4,<1
 
 # Experiment extensions
-mlflow-skinny>=2.18,<4
+mlflow-skinny>=3.17.1,<4
 optuna>=3.6,<5
 shap>=0.46,<1
 pyarrow>=16,<25
