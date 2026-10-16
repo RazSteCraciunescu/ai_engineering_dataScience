@@ -5,7 +5,7 @@ gradio>=5,<7
 # Experiment tracking and tracing
 mlflow>=2.18,<4
 wandb>=0.19,<1
-langfuse>=3,<4
+langfuse>=3,<5
 
 # NLP, LLM orchestration and vector databases
 transformers>=4.47,<6
