@@ -30,4 +30,4 @@ safetensors>=0.4,<1
 mlflow-skinny>=2.18,<4
 optuna>=3.6,<5
 shap>=0.46,<1
-pyarrow>=16,<25
+pyarrow>=26.0.0,<27
