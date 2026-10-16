@@ -1,0 +1,170 @@
+{
+  "status": "passed",
+  "error": null,
+  "checks_passed": 38,
+  "checks_total": 38,
+  "repository_files": 157,
+  "repository_bytes": 7737449,
+  "tracked_artifact_hashes": {
+    "data/processed/feedback.csv": "12343737953c057b82ac0d24c3428939b0fff42afd62d7cbd4dadd653b259307",
+    "artifacts/database/feedback_intelligence.sqlite": "b60ecb60302961287032bf60b09ba2e94f2ca5ba121668ebc8ddad2a29163bed",
+    "artifacts/models/priority_classifier.joblib": "39bbf093e62bff11a7194cdab0aa1391bff173fc5e65f499ee9b0fcf514e3eac",
+    "artifacts/models/resolution_regressor.joblib": "78f243b26f759c21c9c4d64a5ef893743d310d6e939d88e57dad65032de0caa2",
+    "artifacts/models/semantic_index.joblib": "e812de283a8effe72d8d43e2bf5c9fe983422eace7ebfe5e3d4718dd198c7468",
+    "docs/images/dashboard.png": "3a61850f3c6d5ba350231852d689a46cc3dd8d5eb8bf71e1a57054f5d52cba41"
+  },
+  "checks": [
+    {
+      "check": "required files exist; missing=[]",
+      "passed": true
+    },
+    {
+      "check": "no repository-local environments or Git history; found=[]",
+      "passed": true
+    },
+    {
+      "check": "canonical dataset shape is 720x26; actual=(720, 26)",
+      "passed": true
+    },
+    {
+      "check": "record IDs are unique",
+      "passed": true
+    },
+    {
+      "check": "priority domain is normalized",
+      "passed": true
+    },
+    {
+      "check": "satisfaction stays within 1..5",
+      "passed": true
+    },
+    {
+      "check": "12 extreme durations are flagged and retained",
+      "passed": true
+    },
+    {
+      "check": "missing-value path is represented",
+      "passed": true
+    },
+    {
+      "check": "raw source counts match design; actual={'csv': 240, 'json': 243, 'html': 243}",
+      "passed": true
+    },
+    {
+      "check": "SQLite row count matches canonical data; actual=720",
+      "passed": true
+    },
+    {
+      "check": "category summary view has six rows; actual=6",
+      "passed": true
+    },
+    {
+      "check": "classifier accuracy is plausible; actual=0.8111",
+      "passed": true
+    },
+    {
+      "check": "classifier macro-F1 is plausible; actual=0.7985",
+      "passed": true
+    },
+    {
+      "check": "regression MAE is bounded; actual=6.7737",
+      "passed": true
+    },
+    {
+      "check": "regression R-squared is plausible; actual=0.4206",
+      "passed": true
+    },
+    {
+      "check": "classifier artifact is loadable",
+      "passed": true
+    },
+    {
+      "check": "regressor artifact is loadable",
+      "passed": true
+    },
+    {
+      "check": "semantic index contains 12 knowledge documents",
+      "passed": true
+    },
+    {
+      "check": "embedding matrix matches document count",
+      "passed": true
+    },
+    {
+      "check": "five learning notebooks are included; actual=5",
+      "passed": true
+    },
+    {
+      "check": "01_vectors_tensors_and_gradient_descent.ipynb has executable cells",
+      "passed": true
+    },
+    {
+      "check": "01_vectors_tensors_and_gradient_descent.ipynb is executed",
+      "passed": true
+    },
+    {
+      "check": "01_vectors_tensors_and_gradient_descent.ipynb has no stored error output",
+      "passed": true
+    },
+    {
+      "check": "02_eda_distributions_and_outliers.ipynb has executable cells",
+      "passed": true
+    },
+    {
+      "check": "02_eda_distributions_and_outliers.ipynb is executed",
+      "passed": true
+    },
+    {
+      "check": "02_eda_distributions_and_outliers.ipynb has no stored error output",
+      "passed": true
+    },
+    {
+      "check": "03_machine_learning_evaluation.ipynb has executable cells",
+      "passed": true
+    },
+    {
+      "check": "03_machine_learning_evaluation.ipynb is executed",
+      "passed": true
+    },
+    {
+      "check": "03_machine_learning_evaluation.ipynb has no stored error output",
+      "passed": true
+    },
+    {
+      "check": "04_embeddings_vector_search_and_rag.ipynb has executable cells",
+      "passed": true
+    },
+    {
+      "check": "04_embeddings_vector_search_and_rag.ipynb is executed",
+      "passed": true
+    },
+    {
+      "check": "04_embeddings_vector_search_and_rag.ipynb has no stored error output",
+      "passed": true
+    },
+    {
+      "check": "05_opencv_image_quality.ipynb has executable cells",
+      "passed": true
+    },
+    {
+      "check": "05_opencv_image_quality.ipynb is executed",
+      "passed": true
+    },
+    {
+      "check": "05_opencv_image_quality.ipynb has no stored error output",
+      "passed": true
+    },
+    {
+      "check": "dashboard preview is high resolution; actual=(1440, 1980)",
+      "passed": true
+    },
+    {
+      "check": "OpenAPI document includes the core endpoints",
+      "passed": true
+    },
+    {
+      "check": "no credentials, machine paths or attribution markers; findings=[]",
+      "passed": true
+    }
+  ]
+}

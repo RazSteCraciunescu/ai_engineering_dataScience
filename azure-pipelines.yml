@@ -1,0 +1,23 @@
+trigger:
+  branches:
+    include: [main]
+pool:
+  vmImage: ubuntu-latest
+steps:
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: '3.11'
+  - script: python -m pip install --upgrade pip
+    displayName: Upgrade pip
+  - script: python -m pip install -r requirements-dev.txt && python -m pip install -e .
+    displayName: Install
+  - script: python -m compileall -q src tests examples apps scripts
+    displayName: Compile
+  - script: python scripts/run_pipeline.py
+    displayName: Rebuild deterministic artifacts
+  - script: pytest -q --cov=feedback_intelligence --cov-report=xml
+    displayName: Test
+  - script: python scripts/validate_repository.py
+    displayName: Validate artifacts
+  - script: python scripts/api_smoke.py
+    displayName: API smoke test

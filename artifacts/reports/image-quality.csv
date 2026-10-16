@@ -1,0 +1,11 @@
+file,width,height,channels,brightness,contrast,laplacian_variance,noise_score,underexposed,overexposed,low_contrast,blurred
+inspection-blurred.png,640,360,3,217.501,32.14,1.333,0.08,False,False,False,True
+inspection-bright.png,640,360,3,240.442,32.577,746.447,1.452,False,True,False,False
+inspection-clear.png,640,360,3,217.5,43.353,1040.346,1.768,False,False,False,False
+inspection-dark.png,640,360,3,89.189,20.739,237.448,0.843,True,False,True,False
+inspection-low-contrast.png,640,360,3,195.917,14.98,124.272,0.609,False,False,True,False
+inspection-noise-1.png,640,360,3,217.525,43.509,1426.273,4.387,False,False,False,False
+inspection-noise-2.png,640,360,3,217.214,43.781,2122.922,6.204,False,False,False,False
+inspection-noise-3.png,640,360,3,216.502,43.927,3010.691,7.763,False,False,False,False
+inspection-noise-4.png,640,360,3,215.377,44.106,4072.508,9.193,False,False,False,False
+inspection-noise-5.png,640,360,3,214.187,44.24,5368.421,10.592,False,False,False,False

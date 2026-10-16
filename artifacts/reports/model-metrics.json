@@ -1,0 +1,166 @@
+{
+  "packages": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.8.0"
+  },
+  "priority_classifier": {
+    "model": "tfidf-logistic-regression",
+    "seed": 42,
+    "train_rows": 540,
+    "test_rows": 180,
+    "features": [
+      "text",
+      "category",
+      "channel",
+      "product",
+      "language",
+      "status",
+      "affected_users",
+      "attachment_count",
+      "text_length"
+    ],
+    "accuracy": 0.8111111111111111,
+    "macro_precision": 0.8018648018648019,
+    "macro_recall": 0.795460588793922,
+    "macro_f1": 0.7985162998793393,
+    "labels": [
+      "low",
+      "medium",
+      "high"
+    ],
+    "confusion_matrix": [
+      [
+        67,
+        11,
+        0
+      ],
+      [
+        10,
+        59,
+        6
+      ],
+      [
+        0,
+        7,
+        20
+      ]
+    ],
+    "classification_report": {
+      "low": {
+        "precision": 0.8701298701298701,
+        "recall": 0.8589743589743589,
+        "f1-score": 0.864516129032258,
+        "support": 78.0
+      },
+      "medium": {
+        "precision": 0.7662337662337663,
+        "recall": 0.7866666666666666,
+        "f1-score": 0.7763157894736842,
+        "support": 75.0
+      },
+      "high": {
+        "precision": 0.7692307692307693,
+        "recall": 0.7407407407407407,
+        "f1-score": 0.7547169811320755,
+        "support": 27.0
+      },
+      "accuracy": 0.8111111111111111,
+      "macro avg": {
+        "precision": 0.8018648018648018,
+        "recall": 0.795460588793922,
+        "f1-score": 0.7985162998793394,
+        "support": 180.0
+      },
+      "weighted avg": {
+        "precision": 0.8117049617049618,
+        "recall": 0.8111111111111111,
+        "f1-score": 0.8112961153644916,
+        "support": 180.0
+      }
+    }
+  },
+  "resolution_regressor": {
+    "model": "tfidf-random-forest-regressor",
+    "seed": 42,
+    "train_rows": 484,
+    "test_rows": 162,
+    "features": [
+      "text",
+      "category",
+      "channel",
+      "product",
+      "language",
+      "status",
+      "affected_users",
+      "attachment_count",
+      "text_length",
+      "priority"
+    ],
+    "mae_hours": 6.773677478797841,
+    "rmse_hours": 9.02398935902771,
+    "r2": 0.42056881354523656
+  },
+  "unsupervised": {
+    "clusters": {
+      "0": 240,
+      "1": 120,
+      "2": 120,
+      "3": 120,
+      "4": 120
+    },
+    "top_terms": {
+      "0": [
+        "workspace",
+        "settings",
+        "save",
+        "profile",
+        "reloads",
+        "editing",
+        "users",
+        "roughly"
+      ],
+      "1": [
+        "invoice",
+        "total",
+        "wrong",
+        "looks",
+        "charged",
+        "twice",
+        "tax",
+        "match"
+      ],
+      "2": [
+        "views",
+        "saved",
+        "allow",
+        "report",
+        "teammates",
+        "requested",
+        "repetitive",
+        "work"
+      ],
+      "3": [
+        "unclear",
+        "filter",
+        "labels",
+        "workflow",
+        "clicks",
+        "needs",
+        "unexpectedly",
+        "focus"
+      ],
+      "4": [
+        "results",
+        "search",
+        "stall",
+        "request",
+        "times",
+        "worse",
+        "delay",
+        "afternoon"
+      ]
+    },
+    "anomalies": 36
+  }
+}

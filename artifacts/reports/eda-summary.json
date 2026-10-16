@@ -1,0 +1,48 @@
+{
+  "rows": 720,
+  "categories": {
+    "billing": 120,
+    "account": 120,
+    "performance": 120,
+    "usability": 120,
+    "feature request": 120,
+    "reliability": 120
+  },
+  "priorities": {
+    "low": 313,
+    "medium": 298,
+    "high": 109
+  },
+  "channels": {
+    "web": 374,
+    "mobile": 195,
+    "community": 151
+  },
+  "resolution_hours": {
+    "count": 646.0,
+    "mean": 48.626114551083596,
+    "median": 44.625,
+    "variance": 1008.857282399261,
+    "standard_deviation": 31.762513792193165,
+    "minimum": 13.82,
+    "maximum": 342.01,
+    "skewness": 6.500520513890148
+  },
+  "satisfaction": {
+    "count": 720.0,
+    "mean": 3.8430555555555554,
+    "median": 4.0,
+    "variance": 0.7973091485087312,
+    "standard_deviation": 0.8929216922601507,
+    "minimum": 1.0,
+    "maximum": 5.0,
+    "skewness": -0.4502302911446421
+  },
+  "outliers": 12,
+  "missing": {
+    "satisfaction_raw": 24,
+    "resolution_hours_raw": 74,
+    "resolution_hours": 74,
+    "resolution_hours_model": 74
+  }
+}

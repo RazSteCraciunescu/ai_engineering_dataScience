@@ -1,0 +1,23 @@
+{
+  "documents": 12,
+  "dimensions": 11,
+  "algorithm": "tfidf-truncated-svd-normalized",
+  "distance_metrics": [
+    "cosine",
+    "euclidean"
+  ],
+  "sources": [
+    "01-data-quality.md",
+    "02-statistics.md",
+    "03-evaluation.md",
+    "04-leakage.md",
+    "05-embeddings.md",
+    "06-rag.md",
+    "07-transformers.md",
+    "08-neural-networks.md",
+    "09-computer-vision.md",
+    "10-mlops.md",
+    "11-foundations.md",
+    "12-local-ai.md"
+  ]
+}

@@ -1,0 +1,308 @@
+{
+  "completed_at": "2026-08-30T22:57:04+00:00",
+  "rows": 720,
+  "data_quality": {
+    "sources": [
+      "community_board.html",
+      "public_feedback.csv",
+      "support_forum.json"
+    ],
+    "source_rows": {
+      "csv": 240,
+      "html": 243,
+      "json": 243
+    },
+    "cleaning": {
+      "raw_rows": 726,
+      "canonical_rows": 720,
+      "duplicates_removed": 6,
+      "missing_satisfaction_imputed": 24,
+      "resolution_outliers_flagged": 12,
+      "resolution_lower_fence": 11.403,
+      "resolution_upper_fence": 78.202
+    },
+    "validation": {
+      "ok": true,
+      "rows": 720,
+      "columns": 26,
+      "checks": {
+        "required_columns": true,
+        "unique_record_id": true,
+        "priority_domain": true,
+        "satisfaction_range": true,
+        "non_blank_text": true,
+        "positive_users": true
+      },
+      "missing_by_column": {
+        "satisfaction_raw": 24,
+        "resolution_hours_raw": 74,
+        "resolution_hours": 74,
+        "resolution_hours_model": 74
+      }
+    }
+  },
+  "eda": {
+    "rows": 720,
+    "categories": {
+      "billing": 120,
+      "account": 120,
+      "performance": 120,
+      "usability": 120,
+      "feature request": 120,
+      "reliability": 120
+    },
+    "priorities": {
+      "low": 313,
+      "medium": 298,
+      "high": 109
+    },
+    "channels": {
+      "web": 374,
+      "mobile": 195,
+      "community": 151
+    },
+    "resolution_hours": {
+      "count": 646.0,
+      "mean": 48.626114551083596,
+      "median": 44.625,
+      "variance": 1008.857282399261,
+      "standard_deviation": 31.762513792193165,
+      "minimum": 13.82,
+      "maximum": 342.01,
+      "skewness": 6.500520513890148
+    },
+    "satisfaction": {
+      "count": 720.0,
+      "mean": 3.8430555555555554,
+      "median": 4.0,
+      "variance": 0.7973091485087312,
+      "standard_deviation": 0.8929216922601507,
+      "minimum": 1.0,
+      "maximum": 5.0,
+      "skewness": -0.4502302911446421
+    },
+    "outliers": 12,
+    "missing": {
+      "satisfaction_raw": 24,
+      "resolution_hours_raw": 74,
+      "resolution_hours": 74,
+      "resolution_hours_model": 74
+    }
+  },
+  "model_metrics": {
+    "packages": {
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scikit_learn": "1.8.0"
+    },
+    "priority_classifier": {
+      "model": "tfidf-logistic-regression",
+      "seed": 42,
+      "train_rows": 540,
+      "test_rows": 180,
+      "features": [
+        "text",
+        "category",
+        "channel",
+        "product",
+        "language",
+        "status",
+        "affected_users",
+        "attachment_count",
+        "text_length"
+      ],
+      "accuracy": 0.8111111111111111,
+      "macro_precision": 0.8018648018648019,
+      "macro_recall": 0.795460588793922,
+      "macro_f1": 0.7985162998793393,
+      "labels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "confusion_matrix": [
+        [
+          67,
+          11,
+          0
+        ],
+        [
+          10,
+          59,
+          6
+        ],
+        [
+          0,
+          7,
+          20
+        ]
+      ],
+      "classification_report": {
+        "low": {
+          "precision": 0.8701298701298701,
+          "recall": 0.8589743589743589,
+          "f1-score": 0.864516129032258,
+          "support": 78.0
+        },
+        "medium": {
+          "precision": 0.7662337662337663,
+          "recall": 0.7866666666666666,
+          "f1-score": 0.7763157894736842,
+          "support": 75.0
+        },
+        "high": {
+          "precision": 0.7692307692307693,
+          "recall": 0.7407407407407407,
+          "f1-score": 0.7547169811320755,
+          "support": 27.0
+        },
+        "accuracy": 0.8111111111111111,
+        "macro avg": {
+          "precision": 0.8018648018648018,
+          "recall": 0.795460588793922,
+          "f1-score": 0.7985162998793394,
+          "support": 180.0
+        },
+        "weighted avg": {
+          "precision": 0.8117049617049618,
+          "recall": 0.8111111111111111,
+          "f1-score": 0.8112961153644916,
+          "support": 180.0
+        }
+      }
+    },
+    "resolution_regressor": {
+      "model": "tfidf-random-forest-regressor",
+      "seed": 42,
+      "train_rows": 484,
+      "test_rows": 162,
+      "features": [
+        "text",
+        "category",
+        "channel",
+        "product",
+        "language",
+        "status",
+        "affected_users",
+        "attachment_count",
+        "text_length",
+        "priority"
+      ],
+      "mae_hours": 6.773677478797841,
+      "rmse_hours": 9.02398935902771,
+      "r2": 0.42056881354523656
+    },
+    "unsupervised": {
+      "clusters": {
+        "0": 240,
+        "1": 120,
+        "2": 120,
+        "3": 120,
+        "4": 120
+      },
+      "top_terms": {
+        "0": [
+          "workspace",
+          "settings",
+          "save",
+          "profile",
+          "reloads",
+          "editing",
+          "users",
+          "roughly"
+        ],
+        "1": [
+          "invoice",
+          "total",
+          "wrong",
+          "looks",
+          "charged",
+          "twice",
+          "tax",
+          "match"
+        ],
+        "2": [
+          "views",
+          "saved",
+          "allow",
+          "report",
+          "teammates",
+          "requested",
+          "repetitive",
+          "work"
+        ],
+        "3": [
+          "unclear",
+          "filter",
+          "labels",
+          "workflow",
+          "clicks",
+          "needs",
+          "unexpectedly",
+          "focus"
+        ],
+        "4": [
+          "results",
+          "search",
+          "stall",
+          "request",
+          "times",
+          "worse",
+          "delay",
+          "afternoon"
+        ]
+      },
+      "anomalies": 36
+    }
+  },
+  "retrieval": {
+    "documents": 12,
+    "dimensions": 11,
+    "algorithm": "tfidf-truncated-svd-normalized",
+    "distance_metrics": [
+      "cosine",
+      "euclidean"
+    ],
+    "sources": [
+      "01-data-quality.md",
+      "02-statistics.md",
+      "03-evaluation.md",
+      "04-leakage.md",
+      "05-embeddings.md",
+      "06-rag.md",
+      "07-transformers.md",
+      "08-neural-networks.md",
+      "09-computer-vision.md",
+      "10-mlops.md",
+      "11-foundations.md",
+      "12-local-ai.md"
+    ]
+  },
+  "image_count": 10,
+  "outputs": {
+    "data/processed/feedback.csv": {
+      "bytes": 441592,
+      "sha256": "12343737953c057b82ac0d24c3428939b0fff42afd62d7cbd4dadd653b259307"
+    },
+    "artifacts/database/feedback_intelligence.sqlite": {
+      "bytes": 589824,
+      "sha256": "b60ecb60302961287032bf60b09ba2e94f2ca5ba121668ebc8ddad2a29163bed"
+    },
+    "artifacts/models/priority_classifier.joblib": {
+      "bytes": 41418,
+      "sha256": "39bbf093e62bff11a7194cdab0aa1391bff173fc5e65f499ee9b0fcf514e3eac"
+    },
+    "artifacts/models/resolution_regressor.joblib": {
+      "bytes": 2582819,
+      "sha256": "78f243b26f759c21c9c4d64a5ef893743d310d6e939d88e57dad65032de0caa2"
+    },
+    "artifacts/models/semantic_index.joblib": {
+      "bytes": 77282,
+      "sha256": "e812de283a8effe72d8d43e2bf5c9fe983422eace7ebfe5e3d4718dd198c7468"
+    },
+    "artifacts/reports/dashboard.html": {
+      "bytes": 7788,
+      "sha256": "d58fe3a41509b9bbfd9c32cc6c08782aa296386aa76c1844b9a27029de814e91"
+    }
+  }
+}

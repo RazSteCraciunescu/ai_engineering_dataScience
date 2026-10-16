@@ -1,0 +1,40 @@
+{
+  "sources": [
+    "community_board.html",
+    "public_feedback.csv",
+    "support_forum.json"
+  ],
+  "source_rows": {
+    "csv": 240,
+    "html": 243,
+    "json": 243
+  },
+  "cleaning": {
+    "raw_rows": 726,
+    "canonical_rows": 720,
+    "duplicates_removed": 6,
+    "missing_satisfaction_imputed": 24,
+    "resolution_outliers_flagged": 12,
+    "resolution_lower_fence": 11.403,
+    "resolution_upper_fence": 78.202
+  },
+  "validation": {
+    "ok": true,
+    "rows": 720,
+    "columns": 26,
+    "checks": {
+      "required_columns": true,
+      "unique_record_id": true,
+      "priority_domain": true,
+      "satisfaction_range": true,
+      "non_blank_text": true,
+      "positive_users": true
+    },
+    "missing_by_column": {
+      "satisfaction_raw": 24,
+      "resolution_hours_raw": 74,
+      "resolution_hours": 74,
+      "resolution_hours_model": 74
+    }
+  }
+}

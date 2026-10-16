@@ -1,0 +1,10 @@
+fastapi>=0.115,<1
+joblib>=1.4,<2
+matplotlib>=3.9,<4
+numpy>=2.0,<3
+opencv-python-headless>=4.10,<5
+pandas>=2.2,<3
+pydantic>=2.9,<3
+scikit-learn>=1.5,<2
+seaborn>=0.13,<1
+uvicorn>=0.30,<1

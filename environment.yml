@@ -1,0 +1,15 @@
+name: feedback-intelligence
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - jupyter
+  - numpy
+  - pandas
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - sqlite
+  - pip:
+      - -r requirements.txt

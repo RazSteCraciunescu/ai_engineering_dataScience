@@ -1,0 +1,1 @@
+{"version":"2.0.0","tasks":[{"label":"Run tests","type":"shell","command":"python -m pytest -q","group":"test"},{"label":"Rebuild pipeline","type":"shell","command":"python scripts/run_pipeline.py"}]}

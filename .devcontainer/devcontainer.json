@@ -1,0 +1,1 @@
+{"name":"Feedback Intelligence","build":{"dockerfile":"../Dockerfile","context":".."},"forwardPorts":[8000],"postCreateCommand":"python -m pip install -r requirements-dev.txt && python -m pip install -e ."}

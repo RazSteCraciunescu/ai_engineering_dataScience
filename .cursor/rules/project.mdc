@@ -1,0 +1,5 @@
+---
+description: Data and AI engineering repository rules
+alwaysApply: true
+---
+Use Python 3.11-compatible syntax. Keep core workflows deterministic and local. Preserve raw data, provenance and decision-time feature boundaries. Optional frameworks must not break the default installation.

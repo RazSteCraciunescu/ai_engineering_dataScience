@@ -1,0 +1,15 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+  qdrant:
+    image: qdrant/qdrant:v1.12.6
+    profiles: ["vector-db"]
+    ports:
+      - "6333:6333"
+    volumes:
+      - qdrant-data:/qdrant/storage
+volumes:
+  qdrant-data:
