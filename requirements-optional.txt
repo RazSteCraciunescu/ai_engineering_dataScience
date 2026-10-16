@@ -9,7 +9,7 @@ langfuse>=3,<4
 
 # NLP, LLM orchestration and vector databases
 transformers>=4.47,<6
-sentence-transformers>=3.3,<6
+sentence-transformers>=3.3,<7
 langchain>=0.3,<2
 llama-index>=0.12,<1
 crewai>=0.90,<2
